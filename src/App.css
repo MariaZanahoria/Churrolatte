@@ -27,3 +27,25 @@
 .App-link {
   color: #09d3ac;
 }
+* {
+  box-sizing: border-box;
+}
+.styleTables{
+  position: relative;
+  display: inline;
+  text-align: center;
+}
+.styleTables img{
+  width: 200px;
+  height: 200px;
+}
+.textTables{
+  padding: 15px;
+  text-align: center;
+}
+
+
+
+
+
+
