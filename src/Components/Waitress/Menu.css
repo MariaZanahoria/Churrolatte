@@ -1,0 +1,36 @@
+.NewOrder {
+    text-align: center;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 11rem;
+    background-color: rgba(242, 182, 4, 1);
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  }
+
+.block a{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    color: #160146;
+    padding: 1rem .3rem;
+    text-decoration: none;
+}
+
+.block :hover {
+    background-color: rgba(242, 133, 38, 1);
+    color: black;
+  }
+
+.active {
+    background-color: rgba(165, 50, 8, 1);
+    color: white;
+
+  transform: translateY(4px);
+}
