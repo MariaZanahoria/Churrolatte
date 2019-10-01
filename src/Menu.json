@@ -1,0 +1,55 @@
+{
+    "Menu":[
+        {
+            "Churros" : [
+                {
+                    "name": "Natural",
+                    "price": 6,
+                    "url": "https://picsum.photos/id/799/200/200",
+                    "id": 123
+                },
+                {
+                    "name": "Con azucar",
+                    "price": 7,
+                    "url": "https://picsum.photos/id/799/200/200",
+                    "id": 456
+                },
+                {
+                    "name": "Con chocolate",
+                    "price": 8,
+                    "url": "https://picsum.photos/id/799/200/200",
+                    "id": 456
+                }
+            ]
+        },
+    
+        {
+            "Malteadas" : [
+                {
+                    "name": "Nuez",
+                    "price": 40,
+                    "url": "https://picsum.photos/id/799/200/200",
+                    "id": 999
+                },
+                {
+                    "name": "Fresa",
+                    "price": 40,
+                    "url": "https://picsum.photos/id/799/200/200",
+                    "id": 888
+                },
+                {
+                    "name": "Vainilla",
+                    "price": 40,
+                    "url": "https://picsum.photos/id/799/200/200",
+                    "id": 777
+                },
+                {
+                    "name": "Chocolate",
+                    "price": 40,
+                    "url": "https://picsum.photos/id/799/200/200",
+                    "id": 666
+                }
+            ]
+        }
+    ]
+}
