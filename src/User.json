@@ -1,0 +1,31 @@
+{"data":[
+    {
+        "users":[
+            {
+                "userName":"Maria",
+                "passWord":"123456",
+                "waitress":true,
+                "kitchen":false
+            },
+            {
+                "userName":"Karla",
+                "passWord":"123456",
+                "waitress":true,
+                "kitchen":false
+            },
+            {
+                "userName":"Sara",
+                "passWord":"123456",
+                "waitress":false,
+                "kitchen":true
+            },
+            {
+                "userName":"Alejandra",
+                "passWord":"123456",
+                "waitress":false,
+                "kitchen":true
+            }   
+        ]
+    }
+  ]
+}
