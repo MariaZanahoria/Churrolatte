@@ -1,8 +1,23 @@
 import React, { Component } from 'react';
 import Register from './Register'
+import Axios from 'axios';
+import menuData from '../../Menu.json'
+
+
+/*const Login = (props) => {
+    return(
+        <form onSubmit={props.getUser}>
+            <input type='text' name = 'userName'/>
+            <button>Submit</button>
+        </form>
+    )
+}
+export default Login;*/
 
 class Login extends Component {
   constructor(props) {
+      console.log(menuData);
+      
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
@@ -17,7 +32,16 @@ class Login extends Component {
   handleBackToLogin = () => {
     this.setState({ showRegister: false })
   }
-
+  componentDidMount(){
+      Axios.get('https://api.github.com/users/26erika')
+      .then((res) =>{
+          console.log(res)
+          this.setState({
+              token: res
+              
+          })
+      })
+  }
   // onRegisterSuccessful = () => {
   //   this .setState({ })
   // }
