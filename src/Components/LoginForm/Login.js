@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Register from './Register'
-import Axios from 'axios';
-import menuData from '../../Menu.json'
+//import Axios from 'axios';
+import menuData from '../Menu'
 
 
 /*const Login = (props) => {
@@ -33,14 +33,14 @@ class Login extends Component {
     this.setState({ showRegister: false })
   }
   componentDidMount(){
-      Axios.get('https://api.github.com/users/26erika')
+      /*Axios.get('https://api.github.com/users/26erika')
       .then((res) =>{
           console.log(res)
           this.setState({
               token: res
               
           })
-      })
+      })*/
   }
   // onRegisterSuccessful = () => {
   //   this .setState({ })
@@ -55,9 +55,15 @@ class Login extends Component {
               goBackToLogin={this.handleBackToLogin}
             />
             : <form>
+              <div>
               <textarea value={this.state.token} name='token' placeholder='Escribe tu Token' onChange={this.handleChange} />
+              </div>
+              <div>
               <button onClick={() => { }}>Ingresar</button>
+              </div>
+              <div>
               <button onClick={() => this.setState({ showRegister: true })}>Registrate</button>
+              </div>
             </form>
         }
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
-// import BaseURL from '../../Constant/env';
+import userData from '../User';
 
 class Register extends Component {
   constructor(props) {
@@ -8,38 +7,33 @@ class Register extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       name: '',
-      email: '',
+      password: '',
+      selectedOption: false
     }
   }
+
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  handleOptionChange = (changeEvent)=> {
+  handleOptionChange = (changeEvent) => {
     this.setState({
       selectedOption: changeEvent.target.value
     });
   }
 
+  sendRequest = (event) => {
+    event.preventDefault();
+    userData.data[0].users.push({
+      userName: this.state.name,
+      passWord: this.state.password,
+      userOption: this.state.selectedOption
+    })
+  }
 
-  // sendRequest = () => {
-  //  console.log(BaseURL)   
-
-  //  axios.post(BaseURL+ '/test',{name:'', email:''})
-  //  .then(function (response) {
-  //     // handle success
-  //     console.log(response);
-  //   })
-  //   .catch(function (error) {
-  //     // handle error
-  //     console.log(error);
-  //   })
-  //   .finally(function () {
-  //     // always executed
-  //   });
-  // }
 
   render() {
+    console.log(userData)
     return (
       <div>
         <form>
@@ -47,7 +41,7 @@ class Register extends Component {
             <input value={this.state.name} name='name' placeholder='Escribe tu nombre' onChange={this.handleChange} />
           </div>
           <div>
-            <input value={this.state.email} name='email' placeholder='Escribe tu correo' onChange={this.handleChange} />
+            <input value={this.state.email} type='password' name='password' placeholder='Escribe tu contraseña' onChange={this.handleChange} />
           </div>
           <div>
             <label>
