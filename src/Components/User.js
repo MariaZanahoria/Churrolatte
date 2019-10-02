@@ -1,31 +1,29 @@
-{"data":[
+const userData= {
+    "data":[
     {
         "users":[
             {
                 "userName":"Maria",
                 "passWord":"123456",
-                "waitress":true,
-                "kitchen":false
-            },
+                "selectedOption":"waitress"            },
             {
                 "userName":"Karla",
                 "passWord":"123456",
-                "waitress":true,
-                "kitchen":false
+                "selectedOption":"cook"
             },
             {
                 "userName":"Sara",
                 "passWord":"123456",
-                "waitress":false,
-                "kitchen":true
+                "selectedOption":"cook"
             },
             {
                 "userName":"Alejandra",
                 "passWord":"123456",
-                "waitress":false,
-                "kitchen":true
+                "selectedOption":"waitress"
             }   
         ]
     }
   ]
 }
+
+export default userData

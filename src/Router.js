@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, NavLink, Redirect } from 'react-router-dom';
 import Tables from './Components/Waitress/Tables';
-import Menu from './Components/Waitress/Menu';
+import Menu from './Components/Waitress/MenuNav';
 import Login from './Components/LoginForm/Login';
 
 class Routes extends Component {
