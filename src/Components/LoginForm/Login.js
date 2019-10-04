@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Register from './Register'
 //import Axios from 'axios';
-import menuData from '../Menu'
-
 
 /*const Login = (props) => {
     return(
@@ -11,17 +9,15 @@ import menuData from '../Menu'
             <button>Submit</button>
         </form>
     )
-}
-export default Login;*/
+}*/
 
 class Login extends Component {
   constructor(props) {
-      console.log(menuData);
-      
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
-      token: '',
+      name: '',
+      password: '',
       showRegister: false
     }
   }
@@ -32,16 +28,18 @@ class Login extends Component {
   handleBackToLogin = () => {
     this.setState({ showRegister: false })
   }
-  componentDidMount(){
-      /*Axios.get('https://api.github.com/users/26erika')
-      .then((res) =>{
-          console.log(res)
-          this.setState({
-              token: res
-              
-          })
-      })*/
-  }
+
+  /*
+  componentDidMount() {
+    Axios.get('https://api.github.com/users/26erika')
+    .then((res) =>{
+        console.log(res)
+        this.setState({
+            token: res
+            
+        })
+    })
+  }*/
   // onRegisterSuccessful = () => {
   //   this .setState({ })
   // }
@@ -56,17 +54,17 @@ class Login extends Component {
             />
             : <form>
               <div>
-              <textarea value={this.state.token} name='token' placeholder='Escribe tu Token' onChange={this.handleChange} />
+                <input value={this.state.name} name='name' placeholder='Escribe tu Nombre' onChange={this.handleChange} />
               </div>
               <div>
-              <button onClick={() => { }}>Ingresar</button>
+                <input value={this.state.password} type='password' name='password' placeholder='Escribe tu Contraseña' onChange={this.handleChange} />
               </div>
               <div>
-              <button onClick={() => this.setState({ showRegister: true })}>Registrate</button>
+                <button onClick={() => { }}>Ingresar</button>
+                <button onClick={() => this.setState({ showRegister: true })}>Registrate</button>
               </div>
             </form>
         }
-
       </div>
     )
   }
