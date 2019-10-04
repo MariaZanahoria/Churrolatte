@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import './Menu.css';
 import menuChurros from '../Menu';
 
 class Menu extends Component {
     constructor(props) {
-        super(props)
-        this.state = { subCategory: [], selectedItem: {} }
+        super(props); 
+        this.state = {
+            subCategory: [],
+            selectedItem: {}
+        }
     }
 
     render() {
+        const {action,ddd} = this.props
+        console.log("prop: ", action)
+        console.log("prop: ", ddd)
         return <div>
             <ul className='nav'>
-                {menuChurros.categories.map((item, index) => {
-                    { console.log(item) }
-                    return <li className='block'>
-                        <button 
+                {menuChurros.categories.map((item, key) => {
+                    return <li className='block'
+                        key={key}>
+                        <button
                             key={item.key}
                             onClick={() => this.setState({ subCategory: item.subcategories })}>
                             {item.name}
@@ -24,16 +29,19 @@ class Menu extends Component {
                 })}
             </ul>
             <div>
-                {console.log(this.state.subCateory)}
                 {this.state.subCategory ?
-                    this.state.subCategory.map((item, index) => {
-                        return <li className='list'>
-                            <img className='image' src={item.url}></img>
-                            <h6 className='form' key={item.key}>
+                    this.state.subCategory.map((item, key) => {
+                        return <li className='list'
+                            key={key}>
+                            <img className='image' alt='' src={item.url}></img>
+                            <h6 className='form' key={item.id}>
                                 {item.name}
                             </h6>
                             <p>${item.price}</p>
-                            <button onClick={() => this.setState({ selectedItem: item })}>
+                            <button onClick={() => this.props.action()}>a</button>
+                            <button
+                                onClick={() => this.props.action()}
+                                className='sendOrder'>
                                 Ordenar
                             </button>
                         </li>
@@ -41,10 +49,7 @@ class Menu extends Component {
                     : null
                 }
             </div>
-            <div>
-                {console.log(this.state.selectedItem)}
-                <img src={this.state.selectedItem.url}></img>
-            </div>
+
         </div>
     }
 }
