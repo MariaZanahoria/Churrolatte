@@ -52,7 +52,7 @@ class Login extends Component {
             ? <Register
               goBackToLogin={this.handleBackToLogin}
             />
-            : <form>
+            : <form className='login'>
               <div>
                 <input value={this.state.name} name='name' placeholder='Escribe tu Nombre' onChange={this.handleChange} />
               </div>
