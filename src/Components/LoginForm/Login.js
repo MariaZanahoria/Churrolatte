@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import Register from './Register'
+import React, { Component } from "react";
+import Register from "./Register";
+import "./Login.css";
 //import Axios from 'axios';
 
 /*const Login = (props) => {
@@ -16,18 +17,18 @@ class Login extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
-      name: '',
-      password: '',
+      name: "",
+      password: "",
       showRegister: false
-    }
+    };
   }
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
-  }
+  };
 
   handleBackToLogin = () => {
-    this.setState({ showRegister: false })
-  }
+    this.setState({ showRegister: false });
+  };
 
   /*
   componentDidMount() {
@@ -46,27 +47,38 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        {
-          this.state.showRegister
-            ? <Register
-              goBackToLogin={this.handleBackToLogin}
-            />
-            : <form className='login'>
+      <div className="backgroundLogin">
+        <div>
+          {this.state.showRegister ? (
+            <Register goBackToLogin={this.handleBackToLogin} />
+          ) : (
+            <form className="login">
               <div>
-                <input value={this.state.name} name='name' placeholder='Escribe tu Nombre' onChange={this.handleChange} />
+                <input
+                  value={this.state.name}
+                  name="name"
+                  placeholder="Escribe tu Nombre"
+                  onChange={this.handleChange}
+                />
+                <input
+                  value={this.state.password}
+                  type="password"
+                  name="password"
+                  placeholder="Escribe tu Contraseña"
+                  onChange={this.handleChange}
+                />
               </div>
               <div>
-                <input value={this.state.password} type='password' name='password' placeholder='Escribe tu Contraseña' onChange={this.handleChange} />
-              </div>
-              <div>
-                <button onClick={() => { }}>Ingresar</button>
-                <button onClick={() => this.setState({ showRegister: true })}>Registrate</button>
+                <button onClick={() => {}}>Ingresar</button>
+                <button onClick={() => this.setState({ showRegister: true })}>
+                  Registrate
+                </button>
               </div>
             </form>
-        }
+          )}
+        </div>
       </div>
-    )
+    );
   }
 }
 export default Login;

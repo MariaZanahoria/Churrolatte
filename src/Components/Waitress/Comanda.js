@@ -15,7 +15,7 @@ hola(){
         <input type="text"></input>
         <div>
           <ul>
-
+          <li items ={this.state.selectedItem}></li>
             {this.props.selectedItem.map((item, index) => {
               console.log(item.name, item.price);
               return(

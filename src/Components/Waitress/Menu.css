@@ -12,7 +12,7 @@
     padding: 0;
     width: 11rem;
     background-color: rgba(242, 182, 4, 1);
-    height: 70%; /* Full height */
+    flex: none;
     position: fixed; /* Make it stick, even on scroll */
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
   }
@@ -41,7 +41,6 @@
 
 .list {
   list-style-type: none;
-  
 }
 
 .form {

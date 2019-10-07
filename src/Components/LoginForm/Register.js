@@ -36,7 +36,7 @@ class Register extends Component {
     console.log(userData)
     return (
       <div>
-        <form>
+        <form className="login">
           <div>
             <input value={this.state.name} name='name' placeholder='Escribe tu nombre' onChange={this.handleChange} />
           </div>

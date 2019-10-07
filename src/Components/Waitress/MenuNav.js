@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Menu.css";
 import menuChurros from "../Menu";
 import Comanda from "./Comanda";
+import Axios from 'axios';
 
 class Menu extends Component {
   constructor(props) {
@@ -9,13 +10,87 @@ class Menu extends Component {
     this.state = {
       subCategory: [],
       selectedItem: [],
-      order: []
+      total: 0
     };
+  }
+  componentDidMount() {
+    Axios.get('https://churro-latte.herokuapp.com/products')
+    .then((res) =>{
+        console.log(res)
+        const data = [];
+        const menuChurros = () => {
+            res.data.map((item) =>{
+              data.push(item)
+              console.log(data);
+            });
+            return data
+        }
+        menuChurros()
+        this.setState({
+            subCategory: data.category
+        })
+    })
   }
   addProduct = () => {};
 
   render() {
-    let suma = this.state.total + this.state.price;
+    console.log(this.state.selectedItem)
+    const command = this.state;
+    console.log(command);
+    
+    let total = this.state.name + this.state.price;
+    return (
+      <div>
+        <ul className="nav">
+         <button>
+             
+         </button>
+        </ul>
+        </div>
+      
+    );
+  }
+}
+
+export default Menu;
+
+
+
+
+
+
+/*import React, { Component } from "react";
+import "./Menu.css";
+import menuChurros from "../Menu";
+import Comanda from "./Comanda";
+import Axios from 'axios';
+
+class Menu extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      subCategory: [],
+      selectedItem: [],
+      total: 0
+    };
+  }
+  componentDidMount() {
+    Axios.get('https://churro-latte.herokuapp.com/products')
+    .then((res) =>{
+        console.log(res)
+        const data = res.data.category
+        console.log(data)
+        this.setState({
+             data
+            
+        })
+    })
+  }
+  addProduct = () => {};
+
+  render() {
+    
+    let total = this.state.name + this.state.price;
     return (
       <div>
         <ul className="nav">
@@ -49,7 +124,7 @@ class Menu extends Component {
                       onClick={() =>
                         this.setState({
                           selectedItem: [...this.state.selectedItem, item],
-                          suma
+                          total
                         })
                       }
                       className="sendOrder"
@@ -61,13 +136,15 @@ class Menu extends Component {
               })
             : null}
           <div>
+          
             {console.log(...[this.state.selectedItem])}
-            {this.state.selectedItem.name} {this.state.selectedItem.price}
+
           </div>
         </div>
+        
       </div>
     );
   }
 }
 
-export default Menu;
+export default Menu;*/
