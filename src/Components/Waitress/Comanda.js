@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Comanda extends Component {
-  constructor(props){
-    super(props)
-  }
-hola(){
-  console.log('hola');
-  
-}
+
+  calculateTotal = () => {
+    let total = 0;
+    for (let index = 0; index < this.props.itemsToORder.length; index++) {
+      total += this.props.itemsToORder[index].price;
+    }
+    return total;
+  };
+
   render() {
     return (
       <div>
@@ -15,21 +17,19 @@ hola(){
         <input type="text"></input>
         <div>
           <ul>
-          <li items ={this.state.selectedItem}></li>
-            {this.props.selectedItem.map((item, index) => {
-              console.log(item.name, item.price);
-              return(
+            {this.props.itemsToORder.map((item, index) => {
+              return (
                 <li>
-                {item.name} {item.price}
-                <button onClick={()=> this.props.selectedItem(item)}></button>
-              </li>
-              )  
-            }  
-            )}
+                  {item.name} {item.price}
+                </li>
+              );
+            })}
           </ul>
-          <p>Total: {this.props.total}</p>
+          <button onClick={() => {}}>Enviar pedido a cocina</button>
+          <p>Total: {this.calculateTotal()}</p>
+          <button onClick={() => {}}>Cobrar cuenta</button>
         </div>
-       </div>
+      </div>
     );
   }
 }
