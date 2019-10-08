@@ -30,9 +30,9 @@ class Login extends Component {
     this.setState({ showRegister: false });
   };
 
-  /*
-  componentDidMount() {
-    Axios.get('https://api.github.com/users/26erika')
+  
+  /*componentDidMount() {
+    Axios.get('https://churro-latte.herokuapp.com/users')
     .then((res) =>{
         console.log(res)
         this.setState({

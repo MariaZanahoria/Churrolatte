@@ -7,7 +7,7 @@ export default class MenuNav extends React.Component {
   state = {
     categories: [],
     subCategory: [],
-    itemsToORder: []
+    itemsToOrder: []
   };
 
   componentDidMount() {
@@ -24,13 +24,13 @@ export default class MenuNav extends React.Component {
       }
       //inicializa el objeto categorias en la forma requerida
       for (i = 0; i < categoryNames.length; i++) {
-        categories.push({ name: categoryNames[i], subcategories: [] });
+        categories.push({ name: categoryNames[i], subCategories: [] });
       }
       //llena el objeto de categorias con sus subcategorias
       for (i = 0; i < products.length; i++) {
         for (let j = 0; j < categories.length; j++) {
           if (products[i].category === categories[j].name) {
-            categories[j].subcategories.push({
+            categories[j].subCategories.push({
               name: products[i].name,
               price: products[i].price,
               url: products[i].image,
@@ -44,9 +44,9 @@ export default class MenuNav extends React.Component {
   }
 
   orderItem = item => {
-    const orderList = [...this.state.itemsToORder];
+    const orderList = [...this.state.itemsToOrder];
     orderList.push(item);
-    this.setState({ itemsToORder: orderList });
+    this.setState({ itemsToOrder: orderList });
   };
 
   render() {
@@ -59,7 +59,7 @@ export default class MenuNav extends React.Component {
                 <button
                   key={item.key}
                   onClick={() =>
-                    this.setState({ subCategory: item.subcategories })
+                    this.setState({ subCategory: item.subCategories })
                   }
                 >
                   {item.name}
@@ -77,7 +77,7 @@ export default class MenuNav extends React.Component {
                     <h6 className="form" key={item.key}>
                       {item.name}
                     </h6>
-                    <p>${item.price}</p>
+                    <p>{ "$ " + item.price}</p>
                     <button onClick={() => this.orderItem(item)}>
                       Ordenar
                     </button>
@@ -87,8 +87,8 @@ export default class MenuNav extends React.Component {
             : null}
         </div>
         <div>
-          {this.state.itemsToORder.length > 0 ? (
-            <Comanda itemsToORder={this.state.itemsToORder} />
+          {this.state.itemsToOrder.length > 0 ? (
+            <Comanda itemsToOrder={this.state.itemsToOrder} />
           ) : null}
         </div>
       </div>
