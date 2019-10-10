@@ -2,6 +2,7 @@ import React from "react";
 import "./Menu.css";
 import Axios from "axios";
 import Comanda from "./Comanda";
+import baseURL from "../../Constant/env"
 
 export default class MenuNav extends React.Component {
   state = {
@@ -11,7 +12,7 @@ export default class MenuNav extends React.Component {
   };
 
   componentDidMount() {
-    Axios.get(`https://churro-latte.herokuapp.com/products`).then(res => {
+    Axios.get( baseURL +`/products`).then(res => {
       const products = res.data;
       let categories = [];
       let categoryNames = [];
@@ -62,7 +63,7 @@ export default class MenuNav extends React.Component {
                     this.setState({ subCategory: item.subCategories })
                   }
                 >
-                  {item.name}
+                  {item.name.toUpperCase()}
                 </button>
               </li>
             );

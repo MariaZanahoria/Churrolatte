@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import baseURL from "../../Constant/env";
+import Axios from "axios";
 
 class Comanda extends Component {
 
@@ -9,7 +11,24 @@ class Comanda extends Component {
     }
     return total;
   };
-
+  sendOrder = () => {
+    let orderToSend = this.props.itemsToOrder
+    console.log(orderToSend);
+    
+        Axios({ method: 'POST',
+        url:  baseURL +`/orders`,
+        autorizacion: localStorage.token,
+        headers: { 
+        'Content-Type': 'application/json;charset=UTF-8',
+        "Access-Control-Allow-Origin": "*"
+        },
+        data: JSON.stringify({
+          name: 'orders',
+          comanda: orderToSend
+        })
+         })
+      
+        }  
   render() {
     return (
       <div>
@@ -25,7 +44,9 @@ class Comanda extends Component {
               );
             })}
           </ul>
-          <button onClick={() => {}}>Enviar pedido a cocina</button>
+          <button onClick={() => {
+           this.sendOrder()
+           }}>Enviar pedido a cocina</button>
           <p>Total: $ {this.calculateTotal()}</p>
           <button onClick={() => {}}>Cobrar cuenta</button>
         </div>

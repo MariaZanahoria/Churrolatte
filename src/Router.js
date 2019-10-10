@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, NavLink, Redirect } from 'react-router-
 import Tables from './Components/Waitress/Tables';
 import Menu from './Components/Waitress/MenuNav';
 import Login from './Components/LoginForm/Login';
+import KitchenOrders from './Components/Kitchen/Orders';
 
 class Routes extends Component {
     render() {
@@ -20,7 +21,7 @@ class Routes extends Component {
                   <Route path="/Ingresar" component={Login}/>
                   <Route path="/Mesas" component={Tables}/>
                   <Route path="/Nueva_Orden" component={Menu} />
-                  <Route path="/Estatus_de_Orden" />
+                  <Route path="/Estatus_de_Orden" component={KitchenOrders}/>
                   <Redirect to="/Ingresar"/>
                 </Router>
 

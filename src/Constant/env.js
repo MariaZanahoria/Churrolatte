@@ -1,2 +1,4 @@
-const BaseURL= "http://172.17.90.129:5000" ;
-export default BaseURL;
+const baseURL = 'https://churro-latte.herokuapp.com' ;
+//const tokenWaitress = 0;
+//const tokenKitchen = 0;
+export default baseURL;
