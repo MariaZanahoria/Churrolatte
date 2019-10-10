@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Axios from "axios";
 import baseURL from "../../Constant/env";
 
@@ -12,8 +12,9 @@ export default class KitchenOrders extends React.Component {
     Axios.get(baseURL + `/orders`).then(res => {
       let comanda = [];
       const orders = res.data;
-      comanda.push(orders[0]);
-      console.log(comanda);
+      for(let i=0; i<orders.length;i++){
+        comanda.push(orders[i]);
+      }
       this.setState({ comanda });
     });
     
@@ -24,10 +25,8 @@ export default class KitchenOrders extends React.Component {
       <div>
         {this.state.comanda
           ? this.state.comanda.map(item => {
-              console.log(item.comanda)
               return (
                 <li className="list">
-                  <img className="image" src={item.url} alt=""></img>
                   <h6 className="form" key={item.key}>
                     {item.name}
                   </h6>
@@ -35,14 +34,13 @@ export default class KitchenOrders extends React.Component {
                       item.comanda.map((dd)=>{
                           return (
                           <li className="list">
-                          <img className='image' src={dd.url}/>
+                          <img className='image' alt='' src={dd.url}/>
                           <p>{dd.name}</p>
-                          <p>{dd.price}</p>
+                          <p>${dd.price}</p>
                           </li>
                           )
                       })
                   }
-                  <p>{"$ " + item.price}</p>
                   <button onClick={() => {}}>Preparando</button>
                 </li>
               );
