@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import userData from '../User';
+import userData from '../../User';
 
 class Register extends Component {
   constructor(props) {
