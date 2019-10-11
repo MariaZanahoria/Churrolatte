@@ -1,8 +1,8 @@
 import React from "react";
-import "./Menu.css";
 import Axios from "axios";
 import Comanda from "./Comanda";
 import baseURL from "../../Constant/env"
+import "./Menu.css";
 
 export default class MenuNav extends React.Component {
   state = {
@@ -65,10 +65,10 @@ export default class MenuNav extends React.Component {
     const {id} = this.props.match.params
     return (
       <div>
-        <ul className="nav">
+        <ul className="navMenu">
           {this.state.categories.map(item => {
             return (
-              <li className="block">
+              <li className="blockButtons">
                 <button
                   key={item.key}
                   onClick={() =>
