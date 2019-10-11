@@ -12,11 +12,12 @@ const View = () => {
                 <div>
                     <nav>
                         <ul>
+                        Selecciona tu puesto
                             <li className='navList'>
-                                <Link to="/Mesero" className='buttonAccessA'>Meser@</Link>
+                                <Link to="/Mesero" className='buttonAccessA'>Mesero</Link>
                             </li>
                             <li className='navList'>
-                                <Link to="/Cocinero" className='buttonAccessB'>Cociner@</Link>
+                                <Link to="/Cocinero" className='buttonAccessB'>Cocinero</Link>
                             </li>
                         </ul>
                     </nav>

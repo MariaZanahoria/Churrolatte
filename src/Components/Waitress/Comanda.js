@@ -11,50 +11,57 @@ class Comanda extends Component {
     }
     return total;
   };
+
   sendOrder = () => {
     let orderToSend = this.props.itemsToOrder
     console.log(orderToSend);
-    
-        Axios({ method: 'POST',
-        url:  baseURL +`/orders`,
-        autorizacion: localStorage.token,
-        headers: { 
+
+
+    Axios({
+      method: 'POST',
+      url: baseURL + `/orders`,
+      autorizacion: localStorage.token,
+      headers: {
         'Content-Type': 'application/json;charset=UTF-8',
         "Access-Control-Allow-Origin": "*"
-        },
-        data: JSON.stringify({
-          name: 'orders',
-          comanda: orderToSend
-        })
-         })
-      
-        }  
+      },
+      data: JSON.stringify({
+        name: 'orders',
+        comanda: orderToSend
+      })
+    })
+  }
+
   render() {
-    console.log("Render was called");
     return (
       <div>
         <p>Numero de mesa</p>
-        <input type="text"></input>
+        <input
+          type="text"
+          defaultValue={this.props.a != null && this.props.a !== '0'
+            ? this.props.a : ''}></input>
         <div>
           <ul>
             {this.props.itemsToOrder.map((item, index) => {
               return (
                 <li>
                   {item.name} {"$ " + item.price}
-                  <button onClick={() => this.props.removeItem(index)}>Eliminar</button>
+                  <button onClick={() =>
+                    this.props.removeItem(index)}>Eliminar</button>
                 </li>
               );
             })}
           </ul>
           <button onClick={() => {
-           this.sendOrder()
-           }}>Enviar pedido a cocina</button>
+            this.sendOrder()
+          }}>Enviar pedido a cocina</button>
           <p>Total: $ {this.calculateTotal()}</p>
-          <button onClick={() => {}}>Cobrar cuenta</button>
+          <button onClick={() => { }}>Cobrar cuenta</button>
         </div>
       </div>
     );
   }
 }
+
 
 export default Comanda;
