@@ -51,8 +51,6 @@ export default class MenuNav extends React.Component {
   };
   
   removeItem = index => {
-    console.log("removeItem", index);
-    console.log(this.state.itemsToOrder);
     const newList = this.state.itemsToOrder
     const newPrice = newList[index].price
     this.state.itemsToOrder.splice(index, 1);
@@ -60,7 +58,7 @@ export default class MenuNav extends React.Component {
         total: this.state.total - newPrice,
         list: newList
     })
-    console.log(this.state.itemsToOrder);
+
   }
 
   render() {
@@ -106,7 +104,7 @@ export default class MenuNav extends React.Component {
             <Comanda 
             itemsToOrder={this.state.itemsToOrder} 
             removeItem={this.removeItem} 
-            a={id}/>
+            table={id}/>
           ) : null}
         </div>
       </div>

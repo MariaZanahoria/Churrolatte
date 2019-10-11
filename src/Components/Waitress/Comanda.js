@@ -26,7 +26,8 @@ class Comanda extends Component {
         "Access-Control-Allow-Origin": "*"
       },
       data: JSON.stringify({
-        name: 'orders',
+        name: "Mesa" + this.props.table,
+        status: 'pendiente',
         comanda: orderToSend
       })
     })
@@ -38,8 +39,8 @@ class Comanda extends Component {
         <p>Numero de mesa</p>
         <input
           type="text"
-          defaultValue={this.props.a != null && this.props.a !== '0'
-            ? this.props.a : ''}></input>
+          defaultValue={this.props.table != null && this.props.table !== '0'
+            ? this.props.table : ''}></input>
         <div>
           <ul>
             {this.props.itemsToOrder.map((item, index) => {

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import Tables from './Tables';
 import Menu from './MenuNav';
+import OrderStatus from './OrderStatus';
 import './WaitressRoute.css'
+
 
 class WaitressRoutes extends Component {
     render() {
@@ -19,7 +21,7 @@ class WaitressRoutes extends Component {
                     </header>
                     <Route path="/Mesas" component={Tables} />
                     <Route path="/Nueva_Orden/:id" component={Menu} />
-                    {/* <Route path="/Estatus_de_Orden" component={KitchenOrders} /> */}
+                    <Route path="/Estatus_de_Orden" component={OrderStatus}/>
                 </Router>
 
             </div>

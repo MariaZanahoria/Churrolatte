@@ -40,7 +40,7 @@ export default class KitchenOrders extends React.Component {
                       })
                   }
                   <button onClick={() => {}}>Preparando</button>
-                  <button onClick={() =>{}}>Listo</button>
+                  <button onClick={() => {}}>Listo</button>
                 </li>
               );
             })
