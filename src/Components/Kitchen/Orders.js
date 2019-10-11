@@ -9,7 +9,11 @@ export default class KitchenOrders extends React.Component {
   };
 
   componentDidMount() {
-    Axios.get(baseURL + `/orders`).then(res => {
+    Axios.get(baseURL + `/orders`, {
+      headers:{
+        'Authorization': '778899'
+      }
+    }).then(res => {
       let comanda = [];
       const orders = res.data;
       for(let i=0; i<orders.length;i++){

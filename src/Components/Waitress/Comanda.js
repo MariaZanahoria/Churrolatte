@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import baseURL from "../../Constant/env";
 import Axios from "axios";
+import "./Menu.css"; 
 
 class Comanda extends Component {
 
@@ -35,7 +36,7 @@ class Comanda extends Component {
 
   render() {
     return (
-      <div>
+      <div className='listOrder'>
         <p>Numero de mesa</p>
         <input
           type="text"

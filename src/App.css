@@ -4,6 +4,12 @@
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.App-header {
+  min-height: 10hv;
 }
 
 body {
@@ -12,75 +18,3 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
-.App-header {
-  top:0;
-  width: 100%;
-  height: 18rem;
-  margin-bottom: -3rem;
-}
-
-.logoChurro {
-  background-image: url(https://i.ibb.co/vDvZWJw/LogoNew.jpg);
-  pointer-events: none;
-  background: cover;
-  background-size: 22rem 13rem;
-  width: 22rem; 
-  height: 13rem;
-  position: center;
-  margin-top: 2rem;
-  border: rgb(56, 25, 0);
-  border-radius: 2.5rem;
-}
-
-.backgroundLogin{
-  background-image: url(https://cdn.dribbble.com/users/130603/screenshots/3106666/churrohoops_800x600_2.gif);
-  margin-left: auto;
-  margin-right: auto;
-  background-repeat: no-repeat;
-  width: 768px;
-  height: 1024px;
-  margin-top: -2rem;
-}
-
-.navList {
-  list-style-type: none;
-}
-
-.buttonAccessA {
-  background: #522a14;
-  color: #ffffff;
-  border: .5rem solid #522a14;
-  border-radius: 1rem;
-  opacity: .3;
-  width: 9rem; 
-  height: 3rem;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-  justify-content: space-around;
-  vertical-align: baseline;
-  margin-top: 5rem;
-  float: left;
-}
-
-.buttonAccessB {
-  background: #522a14;
-  color: #ffffff;
-  border: .5rem solid #522a14;
-  border-radius: 1rem;
-  opacity: .3;
-  width: 9rem; 
-  height: 3rem;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-  justify-content: space-around;
-  vertical-align: baseline;
-  margin-top: 5rem;
-  float: right;
-  margin-right: 2rem;
-}
-
