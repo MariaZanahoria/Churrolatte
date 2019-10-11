@@ -31,17 +31,16 @@ export default class KitchenOrders extends React.Component {
                     {item.name}
                   </h6>
                   {
-                      item.comanda.map((dd)=>{
+                      item.comanda.map((orderList)=>{
                           return (
                           <li className="list">
-                          <img className='image' alt='' src={dd.url}/>
-                          <p>{dd.name}</p>
-                          <p>${dd.price}</p>
+                          <p>{orderList.name}</p>
                           </li>
                           )
                       })
                   }
                   <button onClick={() => {}}>Preparando</button>
+                  <button onClick={() =>{}}>Listo</button>
                 </li>
               );
             })

@@ -30,6 +30,7 @@ class Comanda extends Component {
       
         }  
   render() {
+    console.log("Render was called");
     return (
       <div>
         <p>Numero de mesa</p>
@@ -40,6 +41,7 @@ class Comanda extends Component {
               return (
                 <li>
                   {item.name} {"$ " + item.price}
+                  <button onClick={() => this.props.removeItem(index)}>Eliminar</button>
                 </li>
               );
             })}

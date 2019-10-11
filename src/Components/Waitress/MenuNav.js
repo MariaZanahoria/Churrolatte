@@ -49,6 +49,19 @@ export default class MenuNav extends React.Component {
     orderList.push(item);
     this.setState({ itemsToOrder: orderList });
   };
+  
+  removeItem = index => {
+    console.log("removeItem", index);
+    console.log(this.state.itemsToOrder);
+    const newList = this.state.itemsToOrder
+    const newPrice = newList[index].price
+    this.state.itemsToOrder.splice(index, 1);
+    this.setState({
+        total: this.state.total - newPrice,
+        list: newList
+    })
+    console.log(this.state.itemsToOrder);
+  }
 
   render() {
     return (
@@ -89,7 +102,7 @@ export default class MenuNav extends React.Component {
         </div>
         <div>
           {this.state.itemsToOrder.length > 0 ? (
-            <Comanda itemsToOrder={this.state.itemsToOrder} />
+            <Comanda itemsToOrder={this.state.itemsToOrder} removeItem={this.removeItem} />
           ) : null}
         </div>
       </div>
