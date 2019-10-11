@@ -64,6 +64,7 @@ export default class MenuNav extends React.Component {
   }
 
   render() {
+    const {id} = this.props.match.params
     return (
       <div>
         <ul className="nav">
@@ -102,7 +103,10 @@ export default class MenuNav extends React.Component {
         </div>
         <div>
           {this.state.itemsToOrder.length > 0 ? (
-            <Comanda itemsToOrder={this.state.itemsToOrder} removeItem={this.removeItem} />
+            <Comanda 
+            itemsToOrder={this.state.itemsToOrder} 
+            removeItem={this.removeItem} 
+            a={id}/>
           ) : null}
         </div>
       </div>

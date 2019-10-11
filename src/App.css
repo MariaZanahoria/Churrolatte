@@ -40,7 +40,7 @@ body {
   background-repeat: no-repeat;
   width: 768px;
   height: 1024px;
-  margin-top: -7rem;
+  margin-top: -2rem;
 }
 
 .navList {
@@ -61,7 +61,7 @@ body {
   text-decoration: none;
   justify-content: space-around;
   vertical-align: baseline;
-  margin-top: 1rem;
+  margin-top: 5rem;
   float: left;
 }
 
@@ -79,7 +79,7 @@ body {
   text-decoration: none;
   justify-content: space-around;
   vertical-align: baseline;
-  margin-top: 1rem;
+  margin-top: 5rem;
   float: right;
   margin-right: 2rem;
 }
