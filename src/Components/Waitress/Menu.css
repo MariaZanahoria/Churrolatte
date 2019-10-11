@@ -1,9 +1,11 @@
 .NewOrder {
-    text-align: center;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    border: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  justify-content: space-between;
 }
 
 .navMenu {
@@ -11,6 +13,7 @@
     margin: 0;
     padding: 0;
     width: 11rem;
+    justify-content: space-between;
     background-color: rgba(242, 182, 4, 1);
     flex: none;
     position: fixed; /* Make it stick, even on scroll */
@@ -25,6 +28,7 @@
     color: #160146;
     padding: 1rem .3rem;
     text-decoration: none;
+    align-items: center;
 }
 
 .blockButtons :hover {
@@ -35,12 +39,15 @@
 .active {
     background-color: rgba(165, 50, 8, 1);
     color: white;
-
-  transform: translateY(4px);
+    transform: translateY(4px);
 }
 
 .list {
   list-style-type: none;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .form {
@@ -50,4 +57,13 @@
 .image {
   width: 10rem; 
   height: 9.5rem;
+}
+
+
+.listOrder {
+  list-style-type: none;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }

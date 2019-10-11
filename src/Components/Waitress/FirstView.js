@@ -1,11 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import '../../App.css';
+import './FirstView.css';
 
 const View = () => {
+    let tokenWaitress = 445566;
+    localStorage.setItem("token", tokenWaitress)
+
     return (
         <div className="App">
-            <header className="App-header">
+            <header className="headerView">
                 <img className='logoChurro' alt='' />
             </header>
             

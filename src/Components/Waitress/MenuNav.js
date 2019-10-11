@@ -12,8 +12,13 @@ export default class MenuNav extends React.Component {
   };
 
   componentDidMount() {
-    Axios.get( baseURL +`/products`).then(res => {
-      const products = res.data;
+    Axios.get( baseURL +`/products`, {
+        headers: {
+            'Authorization': '445566'
+        }
+    }).then(res => {
+
+        const products = res.data;
       let categories = [];
       let categoryNames = [];
       let i;
@@ -62,11 +67,15 @@ export default class MenuNav extends React.Component {
   }
 
   render() {
+    var tokenGuardado = localStorage.getItem("token")
+    console.log(tokenGuardado)
     const {id} = this.props.match.params
     return (
       <div>
         <ul className="navMenu">
           {this.state.categories.map(item => {
+              console.log(item);
+              
             return (
               <li className="blockButtons">
                 <button
@@ -75,7 +84,7 @@ export default class MenuNav extends React.Component {
                     this.setState({ subCategory: item.subCategories })
                   }
                 >
-                  {item.name.toUpperCase()}
+                  { item.name.toUpperCase() } 
                 </button>
               </li>
             );

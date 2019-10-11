@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import baseURL from "../../Constant/env";
 import Axios from "axios";
+import "./Menu.css"; 
 
 class Comanda extends Component {
 
@@ -23,7 +24,8 @@ class Comanda extends Component {
       autorizacion: localStorage.token,
       headers: {
         'Content-Type': 'application/json;charset=UTF-8',
-        "Access-Control-Allow-Origin": "*"
+        "Access-Control-Allow-Origin": "*",
+        'Authorization': '445566'
       },
       data: JSON.stringify({
         name: "Mesa" + this.props.table,
@@ -35,7 +37,7 @@ class Comanda extends Component {
 
   render() {
     return (
-      <div>
+      <div className='listOrder'>
         <p>Numero de mesa</p>
         <input
           type="text"
