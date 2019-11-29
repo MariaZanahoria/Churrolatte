@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Churrolatte/static/css/main.2a9f8395.chunk.css",
+    "main.js": "/Churrolatte/static/js/main.7f72762e.chunk.js",
+    "main.js.map": "/Churrolatte/static/js/main.7f72762e.chunk.js.map",
+    "runtime-main.js": "/Churrolatte/static/js/runtime-main.4a809801.js",
+    "runtime-main.js.map": "/Churrolatte/static/js/runtime-main.4a809801.js.map",
+    "static/js/2.8e3faf16.chunk.js": "/Churrolatte/static/js/2.8e3faf16.chunk.js",
+    "static/js/2.8e3faf16.chunk.js.map": "/Churrolatte/static/js/2.8e3faf16.chunk.js.map",
+    "index.html": "/Churrolatte/index.html",
+    "precache-manifest.b450d03fffe6aa7b23b63bf1fb7d39df.js": "/Churrolatte/precache-manifest.b450d03fffe6aa7b23b63bf1fb7d39df.js",
+    "service-worker.js": "/Churrolatte/service-worker.js",
+    "static/css/main.2a9f8395.chunk.css.map": "/Churrolatte/static/css/main.2a9f8395.chunk.css.map"
+  }
+}
