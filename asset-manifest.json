@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.70f54651.chunk.css",
-    "main.js": "/static/js/main.7b760b64.chunk.js",
-    "main.js.map": "/static/js/main.7b760b64.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.296cb940.js",
-    "runtime-main.js.map": "/static/js/runtime-main.296cb940.js.map",
-    "static/js/2.8e3faf16.chunk.js": "/static/js/2.8e3faf16.chunk.js",
-    "static/js/2.8e3faf16.chunk.js.map": "/static/js/2.8e3faf16.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.9096875f0d50796a327f87784e6a519f.js": "/precache-manifest.9096875f0d50796a327f87784e6a519f.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.70f54651.chunk.css.map": "/static/css/main.70f54651.chunk.css.map"
+    "main.css": "/Churrolatte/static/css/main.70f54651.chunk.css",
+    "main.js": "/Churrolatte/static/js/main.d3e8345c.chunk.js",
+    "main.js.map": "/Churrolatte/static/js/main.d3e8345c.chunk.js.map",
+    "runtime-main.js": "/Churrolatte/static/js/runtime-main.4a809801.js",
+    "runtime-main.js.map": "/Churrolatte/static/js/runtime-main.4a809801.js.map",
+    "static/js/2.8e3faf16.chunk.js": "/Churrolatte/static/js/2.8e3faf16.chunk.js",
+    "static/js/2.8e3faf16.chunk.js.map": "/Churrolatte/static/js/2.8e3faf16.chunk.js.map",
+    "index.html": "/Churrolatte/index.html",
+    "precache-manifest.eb5822c161a5366a1bdedf587d57ef5e.js": "/Churrolatte/precache-manifest.eb5822c161a5366a1bdedf587d57ef5e.js",
+    "service-worker.js": "/Churrolatte/service-worker.js",
+    "static/css/main.70f54651.chunk.css.map": "/Churrolatte/static/css/main.70f54651.chunk.css.map"
   }
 }
